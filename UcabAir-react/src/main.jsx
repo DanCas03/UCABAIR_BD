@@ -1,10 +1,18 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './Pages/App.jsx'
+import Start from './Pages/App.jsx'
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router";
 
-
+export default function App() {
+	return (
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<Start />} />
+			</Routes>
+		</BrowserRouter>
+	);
+}
 
 
 
