@@ -6,7 +6,7 @@ const contrasena = 'soporte'; // Contraseña del usuario de la base de datos, ca
 export const pool = new pg.Pool({
     user: usuario,
     host: 'localhost',
-    database: 'Prueba', // Nombre de la base de datos, yo tengo una que se llama prueba
+    database: 'postgres', // Nombre de la base de datos, yo tengo una que se llama prueba
     password: contrasena,
     port: 5432
 });

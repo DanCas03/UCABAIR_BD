@@ -1,8 +1,15 @@
-const express = require('express');
+import express from "express";
+import cors from "cors";
+import userRoutes from "./Routes/userRoutes.js";
+import pg from "pg";
+
 const app = express();
 const port = 3000;
 
-const userRoutes = require('./Routes/userRoutes');
+const corsOptions = { origin: "*" };
+app.use(cors(corsOptions));
+
+
 
 app.use('/users', userRoutes);
 
