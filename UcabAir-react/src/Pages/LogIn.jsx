@@ -29,6 +29,14 @@ export default function LogIn() {
                         }else{
                             console.log(data);
                             console.log(response);
+                            if(response.message === 'user not found'){
+                                toast.error('Usuario no encontrado');
+                            }else if(response.message === 'success'){
+                                sessionStorage.setItem('user', data.user);
+                                toast.success('Inicio de sesión exitoso');
+                            }else if(response.message === 'incorrect password'){
+                                toast.error('Contraseña incorrecta');
+                            }
                         }
                     }
                 )}>
