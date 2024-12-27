@@ -1,7 +1,7 @@
 import React from 'react';
 import  { useState ,useEffect } from 'react';
 import Logo from '../Components/Logo';
-import '../styles/LogIn.css';
+//import '../styles/LogIn.css';
 import { useForm } from "react-hook-form";
 import toast, { Toaster } from "react-hot-toast";
 import { HandleSignup } from '../Components/ApiSignup';
@@ -104,9 +104,9 @@ export default function SignUp() {
                     }
                 )}>
                     <input {...register("user", {required: 'Es necesario ingresar un usuario'})} placeholder="Usuario" />
-                    {showErrorE && <div className="">{errorEMessage}</div>}
+                    {showErrorE && <div className="erroremail text-red-500">{errorEMessage}</div>}
                     <input {...register("email", {required: 'Se requiere un correo electronico'})} placeholder='Correo Electronico' />
-                    {showErrorP && <div className="color-red">{errorPMessage}</div>}
+                    {showErrorP && <div className="errorpassword text-red-500">{errorPMessage}</div>}
             		{showSuccessful && <div className="color: green">{successfulMessage}</div>}
                     <input {...register("password", {required: 'Es necesario ingresar una contraseña'})} placeholder="Contraseña" />
                     <input {...register("passwordConfirm", {required: 'Es necesario que confirme su contraseña'})} placeholder="Confirmación de Contraseña" />
