@@ -104,7 +104,7 @@ export default function SignUp() {
                     }
                 )}>
                     <input {...register("user", {required: 'Es necesario ingresar un usuario'})} placeholder="Usuario" />
-                    {showErrorE && <div className="erroremail text-red-500">{errorEMessage}</div>}
+                    {showErrorE && <div className="erroremail text-red-500">{errorEMessage}</div>}                      {/* Intento de implementar tailwindcss... se puede cambiar por hotoast */}
                     <input {...register("email", {required: 'Se requiere un correo electronico'})} placeholder='Correo Electronico' />
                     {showErrorP && <div className="errorpassword text-red-500">{errorPMessage}</div>}
             		{showSuccessful && <div className="color: green">{successfulMessage}</div>}

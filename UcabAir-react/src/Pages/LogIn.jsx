@@ -29,7 +29,8 @@ export default function LogIn() {
                 <form onSubmit={handleSubmit(
                     
                     async (data) => {
-                        let response = await HandleLogin(data.user, data.password);
+                        console.log(data);
+                        let response = await HandleLogin(data);
                         if(response === '404'){
                             toast.error('Ocurrio un error de conexión con el servidor'); 
                         }else{
