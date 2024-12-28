@@ -1,7 +1,7 @@
 import React from 'react';
 import  { useState ,useEffect } from 'react';
 import Logo from '../Components/Logo';
-//import '../styles/LogIn.css';
+import '../styles/SignUp.css';
 import { useForm } from "react-hook-form";
 import toast, { Toaster } from "react-hot-toast";
 import { HandleSignup } from '../Components/ApiSignup';
