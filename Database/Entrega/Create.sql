@@ -18,9 +18,7 @@ CREATE TABLE SEDE(
 CREATE TABLE ZONA(
     Zon_Id serial PRIMARY KEY,
     Zon_Nombre VARCHAR(50),
-    Zon_Tipo VARCHAR(50),
     Zon_Descripcion VARCHAR(100),
-    Zon_Ubicacion VARCHAR(50),
     Sed_Id INTEGER NOT NULL,
     CONSTRAINT fk_Sede FOREIGN KEY(Sed_Id) REFERENCES SEDE(Sed_Id)
 );
@@ -28,9 +26,7 @@ CREATE TABLE ZONA(
 CREATE TABLE AREA(
     Are_Id serial PRIMARY KEY,
     Are_Nombre VARCHAR(50),
-    Are_Tipo VARCHAR(50),
     Are_Descripcion VARCHAR(100),
-    Are_Ubicacion VARCHAR(50),
     Zon_Id INTEGER NOT NULL,
     CONSTRAINT fk_zona FOREIGN KEY(Zon_Id) REFERENCES ZONA(Zon_Id)
 );
@@ -49,24 +45,6 @@ Rol_Id integer NOT NULL,
 CONSTRAINT fk_Rol FOREIGN KEY (Rol_Id) REFERENCES ROL(Rol_Id)
 );
 
-CREATE TABLE CORREO(
-    Cor_Id Serial PRIMARY KEY,
-    Cor_Url VARCHAR(50) NOT NULL,
-    Cor_Tipo VARCHAR(50) NOT NULL
-);
-
-CREATE TABLE TELEFONO(
-    Tel_Id SERIAL PRIMARY KEY,
-    Tel_Numero INTEGER NOT NULL,
-    Tel_Cod_Area INTEGER NOT NULL
-);
-
-CREATE TABLE RED_SOCIAL(
-    Red_Id Serial PRIMARY KEY,
-    Red_Nombre VARCHAR(50) NOT NULL,
-    Red_Tipo VARCHAR(50) NOT NULL
-); 
-
 CREATE TABLE CLIENTE(
     Cli_Id serial primary key,
     Cli_Nombre varchar(50) NOT NULL,
@@ -76,12 +54,8 @@ CREATE TABLE CLIENTE(
     Cli_Fecha_Ini_Op date NOT NULL,
     Lug_Id integer NOT NULL, 
     Usu_Id integer NOT NULL,
-    Cor_Id Integer NOT NULL,
-    Tel_Id INTEGER NOT NULL,
     CONSTRAINT fk_lugar FOREIGN KEY(Lug_Id) REFERENCES LUGAR(Lug_Id),
-    CONSTRAINT fk_usuario FOREIGN KEY(Usu_Id) REFERENCES USUARIO(Usu_Id),
-    CONSTRAINT fk_correo FOREIGN KEY(Cor_Id) REFERENCES CORREO(Cor_Id),
-    CONSTRAINT fk_telefono FOREIGN KEY(Tel_Id) REFERENCES TELEFONO(Tel_Id)
+    CONSTRAINT fk_usuario FOREIGN KEY(Usu_Id) REFERENCES USUARIO(Usu_Id)
 );
 
 CREATE TABLE PROVEEDOR(
@@ -92,12 +66,8 @@ CREATE TABLE PROVEEDOR(
     Pro_Fecha_Ini_Op date NOT NULL,
     Lug_Id integer NOT NULL, 
     Usu_Id integer NOT NULL,
-    Cor_Id integer NOT NULL,
-    Tel_Id Integer NOT NULL,
     CONSTRAINT fk_lugar FOREIGN KEY(Lug_Id) REFERENCES LUGAR(Lug_Id),
-    CONSTRAINT fk_usuario FOREIGN KEY(Usu_Id) REFERENCES USUARIO(Usu_Id),
-    CONSTRAINT fk_correo FOREIGN KEY(Cor_Id) REFERENCES CORREO(Cor_Id),
-    CONSTRAINT fk_telefono FOREIGN KEY(Tel_Id) REFERENCES TELEFONO(Tel_Id)
+    CONSTRAINT fk_usuario FOREIGN KEY(Usu_Id) REFERENCES USUARIO(Usu_Id)
 );
 
 CREATE TABLE EMPLEADO(
@@ -105,21 +75,49 @@ CREATE TABLE EMPLEADO(
     Emp_Nombre varchar(50) NOT NULL, 
     Emp_Direccion varchar(50) NOT NULL,
     Emp_Exp_Profesional varchar(50) NOT NULL,
-    Emp_Ano_Servicio integer NOT NULL,
+    Emp_Ano_Servicio date NOT NULL,
     Emp_Titulacion varchar(50) NOT NULL,
     Are_Id integer NOT NULL,
     Lug_Id integer NOT NULL,
     Usu_Id integer NOT NULL,
-    Red_Id integer NOT NULL,
-    Cor_Id Integer NOT NULL,
-    Tel_Id INTEGER NOT NULL,
     CONSTRAINT fk_lugar FOREIGN KEY(Lug_Id) REFERENCES LUGAR(Lug_Id),
     CONSTRAINT fk_usuario FOREIGN KEY(Usu_Id) REFERENCES USUARIO(Usu_Id),
-    CONSTRAINT fk_red_social FOREIGN KEY(Red_Id) REFERENCES RED_SOCIAL(Red_Id),
-    CONSTRAINT fk_correo FOREIGN KEY(Cor_Id) REFERENCES CORREO(Cor_Id),
-    CONSTRAINT fk_telefono FOREIGN KEY(Tel_Id) REFERENCES TELEFONO(Tel_Id),
     CONSTRAINT fk_area FOREIGN KEY(Are_Id) REFERENCES AREA(Are_Id)
 );
+
+CREATE TABLE CORREO(
+    Cor_Id Serial PRIMARY KEY,
+    Cor_Url VARCHAR(50) NOT NULL,
+    Cor_Tipo VARCHAR(50) NOT NULL,
+    Emp_Id INTEGER,
+    Pro_Id INTEGER,
+    Cli_Id INTEGER,
+    CONSTRAINT fk_empleado FOREIGN KEY(Emp_Id) REFERENCES EMPLEADO(Emp_Id),
+    CONSTRAINT fk_proveedor FOREIGN KEY(Pro_Id) REFERENCES PROVEEDOR(Pro_Id),
+    CONSTRAINT fk_cliente FOREIGN KEY(Cli_Id) REFERENCES CLIENTE(Cli_Id)
+);
+
+CREATE TABLE TELEFONO(
+    Tel_Id SERIAL PRIMARY KEY,
+    Tel_Numero INTEGER NOT NULL,
+    Tel_Cod_Area INTEGER NOT NULL,
+    Emp_Id INTEGER,
+    Pro_Id INTEGER,
+    Cli_Id INTEGER,
+    CONSTRAINT fk_empleado FOREIGN KEY(Emp_Id) REFERENCES EMPLEADO(Emp_Id),
+    CONSTRAINT fk_proveedor FOREIGN KEY(Pro_Id) REFERENCES PROVEEDOR(Pro_Id),
+    CONSTRAINT fk_cliente FOREIGN KEY(Cli_Id) REFERENCES CLIENTE(Cli_Id)
+);
+
+CREATE TABLE RED_SOCIAL(
+    Red_Id Serial PRIMARY KEY,
+    Red_Nombre VARCHAR(50) NOT NULL,
+    Red_Tipo VARCHAR(50) NOT NULL,
+    Emp_Id INTEGER NOT NULL,
+    CONSTRAINT fk_empleado FOREIGN KEY(Emp_Id) REFERENCES EMPLEADO(Emp_Id)
+); 
+
+
 
 CREATE TABLE TASA_CAMBIO(
     TasC_Id serial primary key, 
@@ -127,19 +125,47 @@ CREATE TABLE TASA_CAMBIO(
     TasC_Valor  NUMERIC Not NULL  
 );
 
+CREATE TABLE MODELO_AERONAVE(
+    ModA_Id serial PRIMARY KEY,
+    ModA_Nombre VARCHAR(50) NOT NULL 
+);
+
+CREATE TABLE SOLICITUD_FABRICACION(
+    SolF_Id serial PRIMARY KEY,
+    SolF_Fecha_Solicitud DATE NOT NULL,
+    SolF_Fecha_Estimada DATE NOT NULL,
+    SolF_Fecha_Culmin DATE,
+    ModA_Id INTEGER NOT NULL,
+    CONSTRAINT fk_modelo_aeronave FOREIGN KEY(ModA_Id) REFERENCES MODELO_AERONAVE(ModA_Id)
+);
+CREATE TABLE VENTA_FACTURA(
+    VenF_Id serial,
+    VenF_Numero_Factura VARCHAR(50) NOT NULL,
+    VenF_Fecha DATE NOT NULL,
+    VenF_Monto_Total NUMERIC NOT NULL,
+    VenF_Impuesto_Total NUMERIC NOT NULL,
+    Cli_Id INTEGER NOT NULL,
+    SolF_Id INTEGER NOT NULL,
+    CONSTRAINT fk_cliente FOREIGN KEY(Cli_Id) REFERENCES CLIENTE(Cli_Id),
+    CONSTRAINT fk_solicitud_fabricacion FOREIGN KEY(SolF_Id) REFERENCES SOLICITUD_FABRICACION(SolF_Id),
+    PRIMARY KEY(VenF_Id, Cli_Id, SolF_Id)
+);
+
 CREATE TABLE PAGO(
     Pag_Id serial PRIMARY key,
-    Pag_Monto integer NOT NULL,
-    Pag_Concepto varchar(50) NOT NULL,
+    Pag_Monto NUMERIC NOT NULL,
     Pag_Fecha DATE NOT NULL,
-    Pag_Referencia varchar(50) NOT NULL,
     TasC_Id integer, 
-    CONSTRAINT fk_Tasa_Cambio FOREIGN key(TasC_Id) REFERENCES TASA_CAMBIO(TasC_Id)
+    VenF_Id integer,
+    Cli_Id integer,
+    SolF_Id integer,
+    CONSTRAINT fk_Tasa_Cambio FOREIGN key(TasC_Id) REFERENCES TASA_CAMBIO(TasC_Id),
+    CONSTRAINT fk_Venta_Factura FOREIGN key(VenF_Id, Cli_Id, SolF_Id) REFERENCES VENTA_FACTURA(VenF_Id, Cli_Id, SolF_Id)
 );
 
 CREATE TABLE PAGO_EMPLEADO(
     PagE_Horas_Extra integer NOT NULL,
-    PagE_Quincena integer NOT NULL,
+    PagE_Quincena NUMERIC NOT NULL,
     Pag_Id integer NOT NULL,
     Emp_Id integer NOT NULL,
     CONSTRAINT pk_empleado FOREIGN KEY(Emp_Id) REFERENCES EMPLEADO(Emp_Id),
@@ -166,7 +192,6 @@ CREATE TABLE HORARIO_EMPLEADO(
 CREATE TABLE BENEFICIARIO(
     Ben_Id serial,
     Ben_Nombre VARCHAR(50) NOT NULL,
-    Ben_Telefono VARCHAR(50) NOT NULL,
     Emp_Id integer NOT NULL,
     CONSTRAINT pk_beneficiario FOREIGN KEY(Emp_Id) REFERENCES EMPLEADO(Emp_Id),
     PRIMARY KEY (Emp_Id, Ben_Id)
@@ -194,13 +219,10 @@ CREATE TABLE CARACTERISTICA_AERONAVE(
     CarA_Nombre VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE MODELO_AERONAVE(
-    ModA_Id serial PRIMARY KEY,
-    ModA_Nombre VARCHAR(50) NOT NULL 
-);
+
 
 CREATE TABLE MODELO_AERONAVE_CARACTERISTICA(
-    ModACar_Valor integer NOT NULL,
+    ModACar_Valor NUMERIC NOT NULL,
     ModACar_Unidad VARCHAR(50) NOT NULL,
     ModA_Id INTEGER NOT NULL,
     CarA_Id INTEGER NOT NULL,
@@ -220,7 +242,7 @@ CREATE TABLE CONFIGURACION_ASIENTO(
 CREATE TABLE MODELO_PIEZA(
   ModP_Id serial primary key,
   ModP_Tipo varchar(50) NOT NULL,
-  ModP_Nombre varchar(20) NOT NULL,
+  ModP_Nombre varchar(70) NOT NULL,
   modelo_pieza integer,
   CONSTRAINT fk_modelo_pieza FOREIGN KEY(modelo_pieza) REFERENCES MODELO_PIEZA(ModP_Id)
 );
@@ -259,9 +281,10 @@ CREATE TABLE ENSAMBLADO(
 
 
 CREATE TABLE EMPLEADO_EQUIPO(
-    EmpE_Jefe_de_Equipo VARCHAR(50) NOT NULL,
+    EmpE_Jefe_de_Equipo INTEGER NOT NULL,
     Emp_Id INTEGER NOT NULL,
     Equ_Id INTEGER NOT NULL,
+    CONSTRAINT fk_jefe FOREIGN KEY(EmpE_Jefe_de_Equipo) REFERENCES EMPLEADO(Emp_Id),
     CONSTRAINT fk_empleado FOREIGN KEY(Emp_Id) REFERENCES EMPLEADO(Emp_Id),
     CONSTRAINT fk_equipo FOREIGN KEY(Equ_Id) REFERENCES EQUIPO(Equ_Id),
     PRIMARY KEY(Emp_Id,Equ_Id)
@@ -279,7 +302,7 @@ CREATE TABLE PRUEBA(
 
 CREATE TABLE ALMACEN(
     Alm_Id serial PRIMARY KEY,
-    Alm_Capacidad INTEGER NOT NULL
+    Alm_Capacidad NUMERIC NOT NULL
 );
 
 CREATE TABLE CARACTERISTICA_PIEZA (
@@ -289,7 +312,7 @@ CREATE TABLE CARACTERISTICA_PIEZA (
 );
 
 CREATE TABLE MODELO_PIEZA_CARACTERISTICA(
-    ModPCar_Valor INTEGER NOT NULL,
+    ModPCar_Valor NUMERIC NOT NULL,
     ModPCar_Unidad VARCHAR(50) NOT NULL,
     ModP_Id INTEGER NOT NULL,
     CarP_Id INTEGER NOT NULL,
@@ -303,53 +326,34 @@ CREATE TABLE EMBALAJE(
     Emb_Tipo VARCHAR(50),
     Equ_Id INTEGER NOT NULL,
     Emp_Id INTEGER NOT NULL,
-    CONSTRAINT fk_equipo FOREIGN KEY(Equ_Id) REFERENCES EQUIPO(Equ_Id),
-    CONSTRAINT fk_embalaje FOREIGN KEY(Emp_Id) REFERENCES EMPLEADO(Emp_Id)
+    CONSTRAINT fk_equipo FOREIGN KEY(Emp_Id, Equ_Id) REFERENCES EMPLEADO_EQUIPO(Emp_Id, Equ_Id)
 );
 
 CREATE TABLE METODO_PAGO(
     MetP_Id serial PRIMARY KEY,
-    TarD_Numero integer,
+    TarD_Numero VARCHAR(70),
     TarD_Fecha DATE,
     TarD_CVV INTEGER,
-    TarD_Banco varchar(50),
-    TarC_Numero Integer,
+    TarD_Banco varchar(70),
+    TarC_Numero VARCHAR(70),
     TarC_Fecha_vencimiento DATE,
     TarC_CVV INTEGER,
     TarC_Banco VARCHAR(50),
     Tra_Fecha DATE,
     Tra_Banco VARCHAR(50),
     Efe_Donominacion VARCHAR(50),
-    Che_Numero INTEGER,
+    Che_Numero VARCHAR(70),
     Che_Banco VARCHAR(50),
-    PagM_Referencia INTEGER,
+    PagM_Referencia VARCHAR(60) UNIQUE,
     PagM_Banco VARCHAR(50),
-    PagM_Telefono INTEGER,
+    PagM_Telefono VARCHAR(50),
     MetP_Tipo VARCHAR(50) NOT NULL,
     CONSTRAINT ch_tipo_MetP CHECK (MetP_Tipo IN('TD','TC','TR','EF','CH','PM'))
 );
 
-CREATE TABLE SOLICITUD_FABRICACION(
-    SolF_Id serial PRIMARY KEY,
-    SolF_Fecha_Solicitud DATE NOT NULL,
-    SolF_Fecha_Estimada DATE NOT NULL,
-    SolF_Fecha_Culmin DATE,
-    ModA_Id INTEGER NOT NULL,
-    CONSTRAINT fk_modelo_aeronave FOREIGN KEY(ModA_Id) REFERENCES MODELO_AERONAVE(ModA_Id)
-);
 
-CREATE TABLE VENTA_FACTURA(
-    VenF_Id serial,
-    VenF_Numero_Factura VARCHAR(50) NOT NULL,
-    VenF_Fecha_Hora DATE NOT NULL,
-    VenF_Monto_Total NUMERIC NOT NULL,
-    VenF_Impuesto_Total NUMERIC NOT NULL,
-    Cli_Id INTEGER NOT NULL,
-    SolF_Id INTEGER NOT NULL,
-    CONSTRAINT fk_cliente FOREIGN KEY(Cli_Id) REFERENCES CLIENTE(Cli_Id),
-    CONSTRAINT fk_solicitud_fabricacion FOREIGN KEY(SolF_Id) REFERENCES SOLICITUD_FABRICACION(SolF_Id),
-    PRIMARY KEY(VenF_Id, Cli_Id, SolF_Id)
-);
+
+
 
 CREATE TABLE SOLICITUD_SEDES(
     SolS_Id serial PRIMARY KEY,
@@ -399,7 +403,7 @@ CREATE TABLE DETALLE_COMPRA(
     MetP_Id INTEGER NOT NULL,
     MatP_Id INTEGER NOT NULL,
     CONSTRAINT fk_compra_factura FOREIGN KEY(ComF_Id, Pro_Id, MetP_Id) REFERENCES COMPRA_FACTURA(ComF_Id,Pro_Id, MetP_Id),
-    CONSTRAINT fk_materia_pieza FOREIGN KEY(MatP_Id) REFERENCES MATERIA_PRIMA(MatP_Id),
+    CONSTRAINT fk_materia_prima FOREIGN KEY(MatP_Id) REFERENCES MATERIA_PRIMA(MatP_Id),
     PRIMARY KEY(DetC_Id, MatP_Id)
 );
 
@@ -436,9 +440,9 @@ CREATE TABLE EMBALAJE_PIEZA(
     EmbP_Fecha_Terminada DATE,
     Emb_Id INTEGER NOT NULL,
     Pie_Id INTEGER NOT NULL,
-    CONSTRAINT pk_embalaje FOREIGN KEY(Emb_Id) REFERENCES EMBALAJE(Emb_Id),
-    CONSTRAINT pk_pieza FOREIGN KEY(Pie_Id) REFERENCES PIEZA(Pie_Id),
-    PRIMARY KEY(EmbP_Id, Emb_Id, Pie_Id)
+    CONSTRAINT pk_embalaje PRIMARY KEY(EmbP_Id, Emb_Id, Pie_Id),
+    CONSTRAINT fk_embalaje FOREIGN KEY(Emb_Id) REFERENCES EMBALAJE(Emb_Id),
+    CONSTRAINT fk_pieza FOREIGN KEY(Pie_Id) REFERENCES PIEZA(Pie_Id)
 );
 
 CREATE TABLE ESTATUS_AERONAVE(
@@ -447,17 +451,15 @@ CREATE TABLE ESTATUS_AERONAVE(
     EstA_Fecha_Fin DATE,
     Est_Id INTEGER NOT NULL,
     Aer_Id INTEGER NOT NULL,
+    CONSTRAINT pk_estatus_aeronave PRIMARY KEY(EstA_Id, Est_Id, Aer_Id),
     CONSTRAINT fk_estatus FOREIGN KEY(Est_Id) REFERENCES ESTATUS(Est_Id),
-    CONSTRAINT fk_aeronave FOREIGN KEY(Aer_Id) REFERENCES AERONAVE(Aer_Id),
-    primary key(Est_Id, Aer_Id, EstA_Id) 
+    CONSTRAINT fk_aeronave FOREIGN KEY(Aer_Id) REFERENCES AERONAVE(Aer_Id)
 );
 
 
 CREATE TABLE INVENTARIO(
     Inv_Id serial PRIMARY KEY,
     Inv_Cantidad INTEGER,
-    fk_almacen INTEGER NOT NULL,
-    fk_materia_prima INTEGER NOT NULL,
     Alm_Id INTEGER NOT NULL,
     MatP_Id INTEGER NOT NULL,
     CONSTRAINT fk_almacen FOREIGN KEY(Alm_Id) REFERENCES ALMACEN(Alm_Id),
@@ -504,13 +506,14 @@ CREATE TABLE ENSAMBLADO_PIEZA(
 );
 
 CREATE TABLE PRUEBA_MATERIA_PRIMA(
+    PruM_Id serial NOT NULL,
     PruM_Fecha_Estimada DATE NOT NULL,
     PruM_Resultado VARCHAR(50),
     MatP_Id INTEGER NOT NULL,
     Pru_Id INTEGER NOT NULL,
     CONSTRAINT fk_materia_prima FOREIGN KEY(MatP_Id) REFERENCES MATERIA_PRIMA(MatP_Id),
     CONSTRAINT fk_prueba FOREIGN KEY(Pru_Id) REFERENCES PRUEBA(Pru_Id),
-    PRIMARY KEY(MatP_Id, Pru_Id)
+    PRIMARY KEY(PruM_Id, MatP_Id, Pru_Id)
 );
 
 CREATE TABLE ESTATUS_PIEZA(
@@ -523,3 +526,13 @@ CREATE TABLE ESTATUS_PIEZA(
     CONSTRAINT fk_pieza FOREIGN KEY(Pie_Id) REFERENCES PIEZA(Pie_Id),
     PRIMARY KEY(Est_Id, Pie_Id)
 );
+
+CREATE TABLE CATALOGO(
+    Pro_Id INTEGER,
+    MatP_Id INTEGER,
+    Cat_Precio_Unitario FLOAT NOT NULL,
+    CONSTRAINT fk_proveedor FOREIGN KEY(Pro_Id) REFERENCES PROVEEDOR(Pro_Id),
+    CONSTRAINT fk_materia_prima  FOREIGN KEY (MatP_Id) REFERENCES MATERIA_PRIMA(MatP_Id),
+    PRIMARY KEY(Pro_Id, MatP_Id)
+);
+

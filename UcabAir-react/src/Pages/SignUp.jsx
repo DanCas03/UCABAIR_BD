@@ -88,15 +88,13 @@ export default function SignUp() {
                             if(response === '404'){
                                 toast.error('Ocurrio un error de conexión con el servidor'); 
                             }else{
-                                if(response.message === 'repeat user'){
+                                if(response.message === 'username already exists user'){
                                     toast.error('Ya existe un usuario con ese nombre');
                                 }else if(response.message === 'success'){
                                     sessionStorage.setItem('user', data.user);
                                     toast.success('Su usuario ha sido creado exitosamente');
-                                }else if(response.message === 'repeat email'){
+                                }else if(response.message === 'email already exists'){
                                     toast.error('Ya existe un usuario con ese correo');
-                                }else if(response.message === 'repeat phone'){
-                                    toast.error('Ya existe un usuario con ese número de teléfono');
                                 }
                             
                             }
