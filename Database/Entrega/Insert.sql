@@ -1957,59 +1957,6 @@ INSERT INTO MODELO_AERONAVE (ModA_Nombre) VALUES
 
 -- FIN INSERT MODELO_AERONAVE
 
---  INICIO INSERT TELEFONO 
-
-INSERT INTO TELEFONO (Tel_Numero, Tel_Cod_Area) VALUES
-(412345678, 58),
-(412987654, 58),
-(412123456, 58),
-(412765432, 58),
-(414345678, 58),
-(414987654, 58),
-(414123456, 58),
-(414765432, 58),
-(416345678, 58),
-(416987654, 58),
-(416123456, 58),
-(416765432, 58),
-(424345678, 58),
-(424987654, 58),
-(424123456, 58),
-(424765432, 58),
-(412123456, 58),
-(414345656, 58),
-(416058765, 58),
-(424245780, 58);
-
--- FIN INSERT TELEFONO
-
--- INICIO INSERT DE CORREO 
-
-INSERT INTO CORREO (Cor_Url, Cor_Tipo) VALUES
-('juanperez1@gmail.com', 'Gmail'),
-('mariagonzalez2@yahoo.com', 'Yahoo'),
-('luismartinez3@hotmail.com', 'Hotmail'),
-('analopez4@outlook.com', 'Outlook'),
-('carlossanchez5@gmail.com', 'Gmail'),
-('lauramorales6@yahoo.com', 'Yahoo'),
-('joseramirez7@hotmail.com', 'Hotmail'),
-('isabeljimenez8@outlook.com', 'Outlook'),
-('pedrofernandez9@gmail.com', 'Gmail'),
-('sofiacastillo10@yahoo.com', 'Yahoo'),
-('diegomendoza11@hotmail.com', 'Hotmail'),
-('valeriaortiz12@outlook.com', 'Outlook'),
-('andreshernandez13@gmail.com', 'Gmail'),
-('carlaparedes14@yahoo.com', 'Yahoo'),
-('nicolasrios15@hotmail.com', 'Hotmail'),
-('patriciamartinez16@outlook.com', 'Outlook'),
-('javiersilva17@gmail.com', 'Gmail'),
-('camilajimenez18@yahoo.com', 'Yahoo'),
-('felipecarrillo19@hotmail.com', 'Hotmail'),
-('dianamoreno20@outlook.com', 'Outlook');
-
--- FIN INSERT DE CORREO
-
-
 -- INICIO INSERT ROL 
 
 INSERT INTO ROL (Rol_Nombre) VALUES
@@ -2217,158 +2164,209 @@ INSERT INTO USUARIO (Usu_Nombre, Usu_Contrasena, Rol_Id) VALUES ('Marcel', 'LUa9
 
 -- INICIO INSERT CLIENTE
 
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Cord', 'Mendeleyevo', 0, 'cdc.gov', '26/01/2024', 361, 1);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Karolina', 'Motema', 0, 'google.co.jp', '19/11/2024', 361, 2);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Hillery', 'San Vicente', 0, 'unesco.org', '14/08/2024', 361, 3);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Lolita', 'Dongao', 0, 'bbb.org', '21/06/2024', 361, 4);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Holli', 'Maardu', 0, 'g.co', '24/10/2024', 390, 5);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Rebekkah', 'Stamboliyski', 0, 'eventbrite.com', '26/05/2024', 390, 6);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Hillie', 'Navashino', 0, 'gov.uk', '09/04/2024', 390, 7);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Latashia', 'Gushan', 0, 'cloudflare.com', '31/10/2024', 390, 8);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Tansy', 'Bailan', 0, 'nymag.com', '24/03/2024', 449, 9);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Uriel', 'Brusque', 0, 'bizjournals.com', '27/12/2023', 449, 10);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Rawley', 'Kizema', 0, 'creativecommons.org', '24/03/2024', 449, 11);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Lawrence', 'San Isidro', 0, 'tumblr.com', '02/01/2024', 449, 12);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Kaja', 'Xinzhuang', 0, 'comsenz.com', '15/09/2024', 475, 13);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Glori', 'San Pablo', 0, 'opensource.org', '20/12/2024', 475, 14);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Dewey', 'Qilong', 0, 'home.pl', '26/11/2024', 475, 15);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Maible', 'Den Chai', 0, 'typepad.com', '05/06/2024', 475, 16);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Anette', 'Doug An', 0, 'squidoo.com', '14/09/2024', 526, 17);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Ashlee', 'Jinqiao', 0, 'mysql.com', '14/04/2024', 526, 18);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Zacharie', 'Oygon', 0, 'comcast.net', '08/12/2024', 526, 19);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Angelina', 'Sansanné-Mango', 0, 'ebay.com', '30/05/2024', 526, 20);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Emmalyn', 'Tejar', 0, 'studiopress.com', '23/03/2024', 580, 21);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Lorianna', 'Frederico Westphalen', 0, 'deviantart.com', '08/04/2024', 580, 22);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Brigida', 'Miches', 0, 'redcross.org', '30/12/2023', 580, 23);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Donelle', 'Druya', 0, 'mlb.com', '17/06/2024', 580, 24);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Parry', 'Ayn Ḩalāqīm', 0, 'bloglovin.com', '21/09/2024', 628, 25);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Lynett', 'Songao', 0, 'opensource.org', '21/11/2024', 628, 26);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Dante', 'Mahdia', 0, 'earthlink.net', '31/03/2024', 628, 27);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Erminie', 'Kavýli', 0, 'umn.edu', '03/09/2024', 628, 28);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Gay', 'Wŏnsan', 0, 'jugem.jp', '09/03/2024', 665, 29);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Hadria', 'Seupakat', 0, 'constantcontact.com', '17/04/2024', 665, 30);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Caressa', 'Jawornik', 0, 'google.co.jp', '21/06/2024', 665, 31);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Sid', 'Nacimiento', 0, 'posterous.com', '21/03/2024', 665, 32);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Claybourne', 'Shaozhai', 0, 'barnesandnoble.com', '28/08/2024', 680, 33);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Killian', 'Mjölby', 0, 'rambler.ru', '17/04/2024', 680, 34);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Irwin', 'Shuitian', 0, 'nymag.com', '02/08/2024', 680, 35);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Maurie', 'Camacupa', 0, 'tinyurl.com', '17/07/2024', 680, 36);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Wilmer', 'Campo', 0, 'huffingtonpost.com', '23/05/2024', 700, 37);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Lacy', 'Duszniki-Zdrój', 0, 'berkeley.edu', '26/02/2024', 700, 38);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Cole', 'La Guadalupe', 0, 'businesswire.com', '14/06/2024', 700, 39);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Modesty', 'Kingisepp', 0, 'va.gov', '19/06/2024', 700, 40);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Dwain', 'Ban Mai', 0, 'google.ca', '03/03/2024', 784, 41);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Fonzie', 'Bordeaux', 0, 'jimdo.com', '02/03/2024', 784, 42);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Anselm', 'Bolobo', 0, 'pagesperso-orange.fr', '03/07/2024', 784, 43);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Lurlene', 'Dehui', 0, 'newsvine.com', '30/11/2024', 784, 44);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Deloria', 'Jicun', 0, 'mashable.com', '26/01/2024', 823, 45);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Cindee', 'Qarqaraly', 0, 'is.gd', '17/08/2024', 823, 46);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Vita', 'Santo Tomás', 0, 'slideshare.net', '15/06/2024', 823, 47);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Godwin', 'Chongmin', 0, 'google.ca', '21/07/2024', 823, 48);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Benny', 'Springfield', 0, 'foxnews.com', '09/11/2024', 881, 49);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Herta', 'Murça', 0, 'thetimes.co.uk', '27/07/2024', 881, 50);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Adora', 'Chejiazhuang', 0, 'biglobe.ne.jp', '26/03/2024', 881, 51);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Therese', 'Malakhovka', 0, 'prnewswire.com', '10/04/2024', 881, 52);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Corny', 'Wólka Pełkińska', 0, 'senate.gov', '13/10/2024', 967, 53);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Jobyna', 'Bayuin', 0, 'techcrunch.com', '03/05/2024', 967, 54);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Ema', 'Santo Tomas', 0, 'businessinsider.com', '13/03/2024', 967, 55);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Leela', 'Santa Bárbara de Padrões', 0, 'photobucket.com', '26/08/2024', 967, 56);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Bastian', 'Misheronskiy', 0, 'netscape.com', '29/02/2024', 1021, 57);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Corrie', 'Svoboda nad Úpou', 0, 'wikispaces.com', '11/09/2024', 1021, 58);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Blithe', 'Maoya', 0, 'kickstarter.com', '08/07/2024', 1021, 59);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Orrin', 'Zhyrovichy', 0, 'elpais.com', '13/06/2024', 1021, 60);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Lyndsay', 'Aija', 0, 'naver.com', '17/03/2024', 1065, 61);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Brockie', 'Mališevo', 0, 'bizjournals.com', '13/08/2024', 1065, 62);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Aeriell', 'Requião', 0, 'go.com', '16/03/2024', 1065, 63);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Deeanne', 'Barão de Cocais', 0, 'amazonaws.com', '20/02/2024', 1065, 64);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Rance', 'Atamanovka', 0, 'myspace.com', '04/03/2024', 1087, 65);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Violante', 'Krikil', 0, 'hugedomains.com', '07/12/2024', 1087, 66);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Orrin', 'Amieirinha', 0, 'reverbnation.com', '20/06/2024', 1087, 67);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Paquito', 'Puerto Iguazú', 0, 'twitter.com', '29/01/2024', 1087, 68);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Gweneth', 'Tertek', 0, 'tiny.cc', '24/01/2024', 1128, 69);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Virgie', 'Itajubá', 0, 'auda.org.au', '17/09/2024', 1128, 70);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Lynnet', 'Gondar', 0, 'fda.gov', '14/09/2024', 1128, 71);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Dionisio', 'Wujiashan', 0, 'harvard.edu', '18/05/2024', 1128, 72);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Hubey', 'Trhové Sviny', 0, 'dedecms.com', '30/08/2024', 1185, 73);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Mace', 'Béziers', 0, 'ehow.com', '21/12/2024', 1185, 74);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Elvyn', 'Tangalla', 0, 'aol.com', '15/06/2024', 1185, 75);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Paulo', 'Dār an Naşr', 0, 'redcross.org', '13/12/2024', 1185, 76);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Marven', 'Messina', 0, 'cbslocal.com', '08/05/2024', 1251, 77);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Reena', 'Kutno', 0, 'exblog.jp', '28/10/2024', 1251, 78);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Somerset', 'Bonn', 0, 'example.com', '04/09/2024', 1251, 79);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Cully', 'Yangdun', 0, 'networksolutions.com', '25/04/2024', 1251, 80);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Lilas', 'Moulins', 0, 'youtube.com', '26/06/2024', 1344, 81);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Sibley', 'Paicol', 0, 'rakuten.co.jp', '04/10/2024', 1344, 82);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Chick', 'Długosiodło', 0, 'edublogs.org', '22/07/2024', 1344, 83);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Ranice', 'Émponas', 0, 'yahoo.com', '24/11/2024', 1344, 84);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Missie', 'Sumuran', 0, 'spotify.com', '15/02/2024', 1355, 85);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Gunilla', 'Miramar', 0, 'alexa.com', '18/04/2024', 1355, 86);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Desi', 'Wanbu', 0, 'webeden.co.uk', '26/01/2024', 1355, 87);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Carling', 'Liujia', 0, 'is.gd', '13/07/2024', 1355, 88);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Sherye', 'Tanjungagung', 0, 'sphinn.com', '11/09/2024', 1376, 89);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Aharon', 'Kungsbacka', 0, 'netlog.com', '27/08/2024', 1376, 90);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Lenee', 'Novki', 0, 'xrea.com', '06/09/2024', 1376, 91);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Lindsay', 'Songping', 0, 'abc.net.au', '16/11/2024', 1376, 92);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Harmonie', 'Steinkjer', 0, 'cloudflare.com', '16/02/2024', 1485, 93);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Cos', 'Xianghua', 0, 'theatlantic.com', '27/02/2024', 1485, 94);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Mariejeanne', 'Rio de Janeiro', 0, 'nydailynews.com', '28/07/2024', 1485, 95);
-insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Chancey', 'Jiujie', 0, 'nifty.com', '21/12/2024', 1485, 96);
+
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Cord', 'Mendeleyevo', 0, 'cdc.gov', '26/01/2024', 361, 1, '17894533');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Karolina', 'Motema', 0, 'google.co.jp', '19/11/2024', 361, 2, '15346789');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Hillery', 'San Vicente', 0, 'unesco.org', '14/08/2024', 361, 3, '18456732');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Lolita', 'Dongao', 0, 'bbb.org', '21/06/2024', 361, 4, '14235678');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Holli', 'Maardu', 0, 'g.co', '24/10/2024', 390, 5, '19345678_1');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Rebekkah', 'Stamboliyski', 0, 'eventbrite.com', '26/05/2024', 390, 6, '16543278_1');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Hillie', 'Navashino', 0, 'gov.uk', '09/04/2024', 390, 7, '17894563_1');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Latashia', 'Gushan', 0, 'cloudflare.com', '31/10/2024', 390, 8, '14567832_1');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Tansy', 'Bailan', 0, 'nymag.com', '24/03/2024', 449, 9, '17654321_1');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Uriel', 'Brusque', 0, 'bizjournals.com', '27/12/2023', 449, 10, '15467893_1');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Rawley', 'Kizema', 0, 'creativecommons.org', '24/03/2024', 449, 11, '18934567_1');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Lawrence', 'San Isidro', 0, 'tumblr.com', '02/01/2024', 449, 12, '14325678_1');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Kaja', 'Xinzhuang', 0, 'comsenz.com', '15/09/2024', 475, 13, '17893456_1');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Glori', 'San Pablo', 0, 'opensource.org', '20/12/2024', 475, 14, '16547832_1');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Dewey', 'Qilong', 0, 'home.pl', '26/11/2024', 475, 15, '19456783_1');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Maible', 'Den Chai', 0, 'typepad.com', '05/06/2024', 475, 16, '15346782_1');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Anette', 'Doug An', 0, 'squidoo.com', '14/09/2024', 526, 17, '18454732');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Ashlee', 'Jinqiao', 0, 'mysql.com', '14/04/2024', 526, 18, '14215678');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Zacharie', 'Oygon', 0, 'comcast.net', '08/12/2024', 526, 19, '19345678_2');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Angelina', 'Sansanné-Mango', 0, 'ebay.com', '30/05/2024', 526, 20, '16543278_2');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Emmalyn', 'Tejar', 0, 'studiopress.com', '23/03/2024', 580, 21, '17894563_2');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Lorianna', 'Frederico Westphalen', 0, 'deviantart.com', '08/04/2024', 580, 22, '14567832_2');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Brigida', 'Miches', 0, 'redcross.org', '30/12/2023', 580, 23, '17654321_2');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Donelle', 'Druya', 0, 'mlb.com', '17/06/2024', 580, 24, '15467893_2');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Parry', 'Ayn Ḩalāqīm', 0, 'bloglovin.com', '21/09/2024', 628, 25, '18934567_2');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Lynett', 'Songao', 0, 'opensource.org', '21/11/2024', 628, 26, '14325678_2');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Dante', 'Mahdia', 0, 'earthlink.net', '31/03/2024', 628, 27, '17893456_2');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Erminie', 'Kavýli', 0, 'umn.edu', '03/09/2024', 628, 28, '16547832_2');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Gay', 'Wŏnsan', 0, 'jugem.jp', '09/03/2024', 665, 29, '19456783_2');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Hadria', 'Seupakat', 0, 'constantcontact.com', '17/04/2024', 665, 30, '15346782_2');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Caressa', 'Jawornik', 0, 'google.co.jp', '21/06/2024', 665, 31, '18426732');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Sid', 'Nacimiento', 0, 'posterous.com', '21/03/2024', 665, 32, '14205678');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Claybourne', 'Shaozhai', 0, 'barnesandnoble.com', '28/08/2024', 680, 33, '19345678_3');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Killian', 'Mjölby', 0, 'rambler.ru', '17/04/2024', 680, 34, '16543278'); 
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Irwin', 'Shuitian', 0, 'nymag.com', '02/08/2024', 680, 35, '2345678');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Maurie', 'Camacupa', 0, 'tinyurl.com', '17/07/2024', 680, 36, '2987654');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Wilmer', 'Campo', 0, 'huffingtonpost.com', '23/05/2024', 700, 37, '2456789');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Lacy', 'Duszniki-Zdrój', 0, 'berkeley.edu', '26/02/2024', 700, 38, '2765432');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Cole', 'La Guadalupe', 0, 'businesswire.com', '14/06/2024', 700, 39, '2896543');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Modesty', 'Kingisepp', 0, 'va.gov', '19/06/2024', 700, 40, '2345671');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Dwain', 'Ban Mai', 0, 'google.ca', '03/03/2024', 784, 41, '2987651');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Fonzie', 'Bordeaux', 0, 'jimdo.com', '02/03/2024', 784, 42, '2456781');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Anselm', 'Bolobo', 0, 'pagesperso-orange.fr', '03/07/2024', 784, 43, '2765431');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Lurlene', 'Dehui', 0, 'newsvine.com', '30/11/2024', 784, 44, '2896541');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Deloria', 'Jicun', 0, 'mashable.com', '26/01/2024', 823, 45, '2345672');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Cindee', 'Qarqaraly', 0, 'is.gd', '17/08/2024', 823, 46, '2987652');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Vita', 'Santo Tomás', 0, 'slideshare.net', '15/06/2024', 823, 47, '2456782');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Godwin', 'Chongmin', 0, 'google.ca', '21/07/2024', 823, 48, '2765433');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Benny', 'Springfield', 0, 'foxnews.com', '09/11/2024', 881, 49, '2896542');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Herta', 'Murça', 0, 'thetimes.co.uk', '27/07/2024', 881, 50, '2345673');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Adora', 'Chejiazhuang', 0, 'biglobe.ne.jp', '26/03/2024', 881, 51, '2987653');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Therese', 'Malakhovka', 0, 'prnewswire.com', '10/04/2024', 881, 52, '2456783');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Corny', 'Wólka Pełkińska', 0, 'senate.gov', '13/10/2024', 967, 53, '2765434');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Jobyna', 'Bayuin', 0, 'techcrunch.com', '03/05/2024', 967, 54, '2896544');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Ema', 'Santo Tomas', 0, 'businessinsider.com', '13/03/2024', 967, 55, '2345674');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Leela', 'Santa Bárbara de Padrões', 0, 'photobucket.com', '26/08/2024', 967, 56, '2987655');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Bastian', 'Misheronskiy', 0, 'netscape.com', '29/02/2024', 1021, 57, '2456784');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Corrie', 'Svoboda nad Úpou', 0, 'wikispaces.com', '11/09/2024', 1021, 58, '2765435');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Blithe', 'Maoya', 0, 'kickstarter.com', '08/07/2024', 1021, 59, '2896545');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Orrin', 'Zhyrovichy', 0, 'elpais.com', '13/06/2024', 1021, 60, '2345675');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Lyndsay', 'Aija', 0, 'naver.com', '17/03/2024', 1065, 61, '2987656');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Brockie', 'Mališevo', 0, 'bizjournals.com', '13/08/2024', 1065, 62, '2456785');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Aeriell', 'Requião', 0, 'go.com', '16/03/2024', 1065, 63, '2765436');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Deeanne', 'Barão de Cocais', 0, 'amazonaws.com', '20/02/2024', 1065, 64, '2896546');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Rance', 'Atamanovka', 0, 'myspace.com', '04/03/2024', 1087, 65, '2345676');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Violante', 'Krikil', 0, 'hugedomains.com', '07/12/2024', 1087, 66, '2987657');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Orrin', 'Amieirinha', 0, 'reverbnation.com', '20/06/2024', 1087, 67, '2456786');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Paquito', 'Puerto Iguazú', 0, 'twitter.com', '29/01/2024', 1087, 68, '2765437');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Gweneth', 'Tertek', 0, 'tiny.cc', '24/01/2024', 1128, 69, '2896547');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Virgie', 'Itajubá', 0, 'auda.org.au', '17/09/2024', 1128, 70, '2345677');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Lynnet', 'Gondar', 0, 'fda.gov', '14/09/2024', 1128, 71, '2987658');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Dionisio', 'Wujiashan', 0, 'harvard.edu', '18/05/2024', 1128, 72, '2456787');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Hubey', 'Trhové Sviny', 0, 'dedecms.com', '30/08/2024', 1185, 73, '2765438');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Mace', 'Béziers', 0, 'ehow.com', '21/12/2024', 1185, 74, '2896548');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Elvyn', 'Tangalla', 0, 'aol.com', '15/06/2024', 1185, 75, '2345679');
+
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Paulo', 'Dār an Naşr', 0, 'redcross.org', '13/12/2024', 1185, 76, '21876543');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Marven', 'Messina', 0, 'cbslocal.com', '08/05/2024', 1251, 77, '22123456');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Reena', 'Kutno', 0, 'exblog.jp', '28/10/2024', 1251, 78, '22234567');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Somerset', 'Bonn', 0, 'example.com', '04/09/2024', 1251, 79, '22345678');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Cully', 'Yangdun', 0, 'networksolutions.com', '25/04/2024', 1251, 80, '22456789');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Lilas', 'Moulins', 0, 'youtube.com', '26/06/2024', 1344, 81, '22567890');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Sibley', 'Paicol', 0, 'rakuten.co.jp', '04/10/2024', 1344, 82, '22678901');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Chick', 'Długosiodło', 0, 'edublogs.org', '22/07/2024', 1344, 83, '22789012');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Ranice', 'Émponas', 0, 'yahoo.com', '24/11/2024', 1344, 84, '22890123');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Missie', 'Sumuran', 0, 'spotify.com', '15/02/2024', 1355, 85, '22901234');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Gunilla', 'Miramar', 0, 'alexa.com', '18/04/2024', 1355, 86, '23012345');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Desi', 'Wanbu', 0, 'webeden.co.uk', '26/01/2024', 1355, 87, '23123456');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Carling', 'Liujia', 0, 'is.gd', '13/07/2024', 1355, 88, '23234567');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Sherye', 'Tanjungagung', 0, 'sphinn.com', '11/09/2024', 1376, 89, '23345678');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Aharon', 'Kungsbacka', 0, 'netlog.com', '27/08/2024', 1376, 90, '23456789');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Lenee', 'Novki', 0, 'xrea.com', '06/09/2024', 1376, 91, '23567890');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Lindsay', 'Songping', 0, 'abc.net.au', '16/11/2024', 1376, 92, '23678901');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Harmonie', 'Steinkjer', 0, 'cloudflare.com', '16/02/2024', 1485, 93, '23789012');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Cos', 'Xianghua', 0, 'theatlantic.com', '27/02/2024', 1485, 94, '23890123');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Mariejeanne', 'Rio de Janeiro', 0, 'nydailynews.com', '28/07/2024', 1485, 95, '23901234');
+insert into CLIENTE (Cli_Nombre, Cli_Direccion, Cli_Monto_Acreditado, Cli_Pag_Web, Cli_Fecha_Ini_Op, Lug_Id, Usu_Id, Cli_Cedula) values ('Chancey', 'Jiujie', 0, 'nifty.com', '21/12/2024', 1485, 96, '24012345');
+
 
 -- FIN INSERT CLLIENTE
 
--- INICIO INSERT PROVEEDOR
-
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Thoughtsphere', 'Yuxarı Aran', 'deviantart.com', '12/09/2024', 361, 97);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Kare', 'Miasskoye', 'rakuten.co.jp', '25/11/2024', 390, 98);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Kare', 'Suicheng', 'symantec.com', '07/10/2024', 449, 99);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Thoughtstorm', 'Pirassununga', 'ebay.co.uk', '11/06/2024', 475, 100);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Jazzy', 'Cipadung Timur', 'webmd.com', '08/10/2024', 526, 101);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Kare', 'Budapest', 'vk.com', '13/10/2024', 580, 102);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Livepath', 'Almere Haven', 'zdnet.com', '18/12/2024', 628, 103);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Riffpedia', 'Guanhães', 'macromedia.com', '01/11/2024', 665, 104);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Eire', 'Tianchi', 'ihg.com', '19/12/2024', 680, 105);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Linktype', 'Achoma', 'aol.com', '16/05/2024', 700, 106);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Voolith', 'Karangnongko', 'blog.com', '14/11/2024', 784, 107);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Brainbox', 'Ārān Bīdgol', 'biblegateway.com', '17/04/2024', 823, 108);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Zoonoodle', 'Kristianstad', 'patch.com', '11/06/2024', 881, 109);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Gigabox', 'Eskilstuna', 'yandex.ru', '27/12/2023', 967, 110);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Abatz', 'Daxing', 'cdc.gov', '12/05/2024', 1021, 111);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Edgewire', 'Lipa City', 'paginegialle.it', '15/09/2024', 1065, 112);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Twiyo', 'Bangonay', 'salon.com', '03/11/2024', 1087, 113);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Meetz', 'Gaocheng', 'etsy.com', '05/01/2024', 1128, 114);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Babbleopia', 'Pjanići', 'list-manage.com', '29/07/2024', 1185, 115);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Bubblemix', 'Dukhovshchina', 'bbb.org', '15/10/2024', 1251, 116);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Tagfeed', 'Wakefield', 'nifty.com', '29/08/2024', 1344, 117);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Feedbug', 'Phayuha Khiri', 'msu.edu', '20/03/2024', 1355, 118);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Eamia', 'Bugul’ma', 'utexas.edu', '02/02/2024', 1376, 119);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Oyondu', 'Jinshanwei', 'yandex.ru', '14/02/2024', 1485, 120);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Layo', 'Sacanche', 'biblegateway.com', '15/02/2024', 361, 121);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Rhynoodle', 'Donggaocun', 'wsj.com', '02/01/2024', 390, 122);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Feedfire', 'Oele', 'time.com', '06/11/2024', 449, 123);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Dynava', 'Gangba', 'dedecms.com', '03/04/2024', 475, 124);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Devpulse', 'Jatiprahu', 'patch.com', '28/09/2024', 526, 125);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Oyonder', 'Minyue', 'yandex.ru', '17/05/2024', 580, 126);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Dabtype', 'Jingzhu', 'de.vu', '17/05/2024', 628, 127);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Oloo', 'San Vicente', 'jiathis.com', '10/11/2024', 665, 128);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Skalith', 'San José de los Remates', 'ftc.gov', '20/07/2024', 680, 129);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Roodel', 'Jiufang', 'hc360.com', '10/04/2024', 700, 130);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Flashset', 'União', 'shinystat.com', '09/08/2024', 784, 131);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Rhybox', 'Tamansari', 'auda.org.au', '25/10/2024', 823, 132);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Skidoo', 'Pilluana', 'blogger.com', '11/10/2024', 881, 133);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Youspan', 'Kanashevo', 'pinterest.com', '10/12/2024', 967, 134);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Skilith', 'Pathum Thani', 'berkeley.edu', '01/10/2024', 1021, 135);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Realbridge', 'Basel', 'cpanel.net', '04/10/2024', 1065, 136);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Meezzy', 'Dikson', 'yahoo.com', '22/07/2024', 1087, 137);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Topicware', 'Xihuachi', '123-reg.co.uk', '11/03/2024', 1128, 138);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Feedfish', 'Longwood', 'dmoz.org', '01/08/2024', 1185, 139);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Skyndu', 'Dimataling', 'posterous.com', '02/08/2024', 1251, 140);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Eamia', 'San Rafael', 'miitbeian.gov.cn', '30/03/2024', 1344, 141);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Topiczoom', 'Krajanbonjor', 'merriam-webster.com', '11/01/2024', 1355, 142);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Browsecat', 'Banikoara', 'cloudflare.com', '14/12/2024', 1376, 143);
-insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id) values ('Dynabox', 'Dodoma', 'discuz.net', '12/05/2024', 1485, 144);
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Thoughtsphere', 'Yuxarı Aran', 'deviantart.com', '12/09/2024', 361, 97, '1234567890');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Karen', 'Miasskoye', 'rakuten.co.jp', '25/11/2024', 390, 98, '2345678901');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Kar', 'Suicheng', 'symantec.com', '07/10/2024', 449, 99, '3456789012');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Thoughtstorm', 'Pirassununga', 'ebay.co.uk', '11/06/2024', 475, 100, '4567890123');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Jazzy', 'Cipadung Timur', 'webmd.com', '08/10/2024', 526, 101, '5678901234');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Kare', 'Budapest', 'vk.com', '13/10/2024', 580, 102, '6789012345');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Livepath', 'Almere Haven', 'zdnet.com', '18/12/2024', 628, 103, '7890123456');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Riffpedia', 'Guanhães', 'macromedia.com', '01/11/2024', 665, 104, '8901234567');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Eire', 'Tianchi', 'ihg.com', '19/12/2024', 680, 105, '9012345678');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Linktype', 'Achoma', 'aol.com', '16/05/2024', 700, 106, '0123456789');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Voolith', 'Karangnongko', 'blog.com', '14/11/2024', 784, 107, '1234509876');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Brainbox', 'Ārān Bīdgol', 'biblegateway.com', '17/04/2024', 823, 108, '2345610987');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Zoonoodle', 'Kristianstad', 'patch.com', '11/06/2024', 881, 109, '3456721098');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Gigabox', 'Eskilstuna', 'yandex.ru', '27/12/2023', 967, 110, '4567832109');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Abatz', 'Daxing', 'cdc.gov', '12/05/2024', 1021, 111, '5678943210');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Edgewire', 'Lipa City', 'paginegialle.it', '15/09/2024', 1065, 112, '6789054321');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Twiyo', 'Bangonay', 'salon.com', '03/11/2024', 1087, 113, '7890165432');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Meetz', 'Gaocheng', 'etsy.com', '05/01/2024', 1128, 114, '8901276543');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Babbleopia', 'Pjanići', 'list-manage.com', '29/07/2024', 1185, 115, '9012387654');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Bubblemix', 'Dukhovshchina', 'bbb.org', '15/10/2024', 1251, 116, '0123498765');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Tagfeed', 'Wakefield', 'nifty.com', '29/08/2024', 1344, 117, '1234509877');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Feedbug', 'Phayuha Khiri', 'msu.edu', '20/03/2024', 1355, 118, '2345610988');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Eamia', 'Bugul’ma', 'utexas.edu', '02/02/2024', 1376, 119, '3456721099');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Oyondu', 'Jinshanwei', 'yandex.ru', '14/02/2024', 1485, 120, '4567832110');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Layo', 'Sacanche', 'biblegateway.com', '15/02/2024', 361, 121, '5678943211');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Rhynoodle', 'Donggaocun', 'wsj.com', '02/01/2024', 390, 122, '6789054322');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Feedfire', 'Oele', 'time.com', '06/11/2024', 449, 123, '7890165433');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Dynava', 'Gangba', 'dedecms.com', '03/04/2024', 475, 124, '8901276544');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Devpulse', 'Jatiprahu', 'patch.com', '28/09/2024', 526, 125, '9012387655');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Oyonder', 'Minyue', 'yandex.ru', '17/05/2024', 580, 126, '0123498766');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Dabtype', 'Jingzhu', 'de.vu', '17/05/2024', 628, 127, '1234509878');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Oloo', 'San Vicente', 'jiathis.com', '10/11/2024', 665, 128, '2345610989');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Skalith', 'San José de los Remates', 'ftc.gov', '20/07/2024', 680, 129, '3456721100');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Roodel', 'Jiufang', 'hc360.com', '10/04/2024', 700, 130, '4567832111');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Flashset', 'União', 'shinystat.com', '09/08/2024', 784, 131, '5678943212');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Rhybox', 'Tamansari', 'auda.org.au', '25/10/2024', 823, 132, '6789054323');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Skidoo', 'Pilluana', 'blogger.com', '11/10/2024', 881, 133, '7890165434');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Youspan', 'Kanashevo', 'pinterest.com', '10/12/2024', 967, 134, '8901276545');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Skilith', 'Pathum Thani', 'berkeley.edu', '01/10/2024', 1021, 135, '9012387656');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Realbridge', 'Basel', 'cpanel.net', '04/10/2024', 1065, 136, '0123498767');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Meezzy', 'Dikson', 'yahoo.com', '22/07/2024', 1087, 137, '1234509879');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Topicware', 'Xihuachi', '123-reg.co.uk', '11/03/2024', 1128, 138, '2345610990');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Feedfish', 'Longwood', 'dmoz.org', '01/08/2024', 1185, 139, '3456721101');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Skyndu', 'Dimataling', 'posterous.com', '02/08/2024', 1251, 140, '4567832112');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Eamia', 'San Rafael', 'miitbeian.gov.cn', '30/03/2024', 1344, 141, '5678943213');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Topiczoom', 'Krajanbonjor', 'merriam-webster.com', '11/01/2024', 1355, 142, '6789054324');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Browsecat', 'Banikoara', 'cloudflare.com', '14/12/2024', 1376, 143, '7890165435');
+insert into PROVEEDOR (Pro_Nombre, Pro_Direccion, Pro_Pag_Web, Pro_Fecha_Ini_Op, Lug_Id, Usu_Id, Pro_Rif) values ('Dynabox', 'Dodoma', 'discuz.net', '12/05/2024', 1485, 144, '8901276546');
 
 -- FIN INSERT PROVEEDOR
+--  INICIO INSERT TELEFONO 
 
+INSERT INTO TELEFONO (Tel_Numero, Tel_Cod_Area, Pro_Id) VALUES
+(412345678, 58, 1),
+(412987654, 58, 2),
+(412123456, 58, 3),
+(412765432, 58, 4),
+(414345678, 58, 5),
+(414987654, 58, 6),
+(414123456, 58, 7),
+(414765432, 58, 8),
+(416345678, 58, 9),
+(416987654, 58, 10),
+(416123456, 58, 11),
+(416765432, 58, 12),
+(424345678, 58, 13),
+(424987654, 58, 14),
+(424123456, 58, 15),
+(424765432, 58, 16),
+(412123456, 58, 17),
+(414345656, 58, 18),
+(416058765, 58, 19),
+(424245780, 58, 20);
+
+-- FIN INSERT TELEFONO
+
+-- INICIO INSERT DE CORREO 
+
+INSERT INTO CORREO (Cor_Url, Cor_Tipo) VALUES
+('juanperez1@gmail.com', 'Gmail'),
+('mariagonzalez2@yahoo.com', 'Yahoo'),
+('luismartinez3@hotmail.com', 'Hotmail'),
+('analopez4@outlook.com', 'Outlook'),
+('carlossanchez5@gmail.com', 'Gmail'),
+('lauramorales6@yahoo.com', 'Yahoo'),
+('joseramirez7@hotmail.com', 'Hotmail'),
+('isabeljimenez8@outlook.com', 'Outlook'),
+('pedrofernandez9@gmail.com', 'Gmail'),
+('sofiacastillo10@yahoo.com', 'Yahoo'),
+('diegomendoza11@hotmail.com', 'Hotmail'),
+('valeriaortiz12@outlook.com', 'Outlook'),
+('andreshernandez13@gmail.com', 'Gmail'),
+('carlaparedes14@yahoo.com', 'Yahoo'),
+('nicolasrios15@hotmail.com', 'Hotmail'),
+('patriciamartinez16@outlook.com', 'Outlook'),
+('javiersilva17@gmail.com', 'Gmail'),
+('camilajimenez18@yahoo.com', 'Yahoo'),
+('felipecarrillo19@hotmail.com', 'Hotmail'),
+('dianamoreno20@outlook.com', 'Outlook');
+
+-- FIN INSERT DE CORREO
 -- INICIO INSERT ZONA 
 INSERT INTO ZONA (Zon_Nombre, Zon_Descripcion, Sed_Id) VALUES
 ('Oeste', 'Zona ubicada al oeste de la fábrica', 1),
@@ -2399,49 +2397,49 @@ INSERT INTO AREA (Are_Nombre, Are_Descripcion, Zon_Id) VALUES
 ('Sala de Reuniones', 'Área para reuniones y planificación', 5);
 
 -- FIN INSERT AREA
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Dana', '253 Moose Point', 'Feednation', '01/01/2022', 'Tecnico', 1, 1485, 145, '12345678');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Celine', '162 Loeprich Junction', 'Quaxo', '01/01/2021', 'Bachillerato', 2, 1376, 146, '14567890');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Dorisa', '14758 Lakewood Gardens Trail', 'Oyonder', '01/01/2020', 'Bachillerato', 3, 967, 147, '16789012');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Elianore', '058 Elgar Drive', 'Roodel', '01/01/2019', 'Universitario', 4, 526, 148, '18901234');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Griswold', '8 Buell Parkway', 'Voolia', '01/01/2018', 'Bachillerato', 5, 390, 149, '12349876');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Forster', '03 Thompson Avenue', 'Realblab', '01/01/2017', 'Bachillerato', 6, 361, 150, '14561234');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Halsey', '44931 Aberg Hill', 'Zazio', '01/01/2016', 'Bachillerato', 7, 449, 151, '16783456');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Lacey', '160 Bunker Hill Place', 'Skipstorm', '01/01/2015', 'Tecnico', 8, 580, 152, '18905678');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Herc', '893 Mallard Trail', 'Thoughtworks', '01/01/2014', 'Bachillerato', 9, 1185, 153, '12347654');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Melisande', '40000 Kings Drive', 'Oyonder', '01/01/2013', 'Universitario', 1, 449, 154, '14563478');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Felisha', '5 Union Street', 'Browsecat', '01/01/2012', 'Universitario', 2, 361, 155, '16785690');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Alfons', '0334 Hovde Crossing', 'Leexo', '01/01/2011', 'Universitario', 3, 1065, 156, '18907812');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Paul', '928 Pepper Wood Parkway', 'Buzzdog', '01/01/2010', 'Tecnico', 4, 1376, 157, '12349812');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Eliza', '4 Springs Crossing', 'Jazzy', '01/01/2009', 'Bachillerato', 5, 700, 158, '14567834');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Talbert', '53713 Johnson Street', 'Meeveo', '01/01/2008', 'Universitario', 6, 665, 159, '16789056');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Madelon', '80140 Graedel Circle', 'Browsebug', '01/01/2007', 'Bachillerato', 7, 700, 160, '18901278');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Anthiathia', '979 Ludington Junction', 'Roomm', '01/01/2006', 'Tecnico', 8, 580, 161, '12345698');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Tannie', '829 Express Plaza', 'Brainsphere', '01/01/2005', 'Tecnico', 9, 881, 162, '14567812');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Cornie', '372 Bartillon Pass', 'Podcat', '01/01/2004', 'Bachillerato', 1, 823, 163, '16789034');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Odille', '4 Montana Avenue', 'Layo', '01/01/2003', 'Bachillerato', 2, 784, 164, '18901256');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Lavina', '370 Pepper Wood Park', 'Dabvine', '01/01/2002', 'Tecnico', 3, 580, 165, '12349854');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Vally', '686 Fair Oaks Center', 'Demivee', '01/01/2001', 'Bachillerato', 4, 1251, 166, '14567870');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Eleen', '06993 Drewry Drive', 'Flipbug', '01/01/2000', 'Tecnico', 5, 1376, 167, '16789002');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Ora', '27 Karstens Street', 'Demimbu', '01/01/1999', 'Bachillerato', 6, 628, 168, '18901334');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Anna-diane', '403 Barnett Pass', 'Voonyx', '01/01/1998', 'Universitario', 7, 1087, 169, '12339876');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Essa', '4 Gulseth Parkway', 'Tagtune', '01/01/1997', 'Tecnico', 8, 881, 170, '14563234');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Lida', '45856 Shelley Park', 'Omba', '01/01/1996', 'Tecnico', 9, 449, 171, '16785456');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Morten', '1980 Fremont Road', 'Brainsphere', '01/01/1995', 'Bachillerato', 1, 1251, 172, '16905678');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Yorgos', '4391 Mcguire Parkway', 'Meejo', '01/01/1994', 'Bachillerato', 2, 1128, 173, '12387654');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Putnem', '99313 Garrison Parkway', 'Yacero', '01/01/1993', 'Tecnico', 3, 1485, 174, '14563978');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Benoit', '2003 Elmside Way', 'Dabjam', '01/01/1992', 'Bachillerato', 4, 665, 175, '16785600');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Camilla', '94 Farragut Crossing', 'Jabberbean', '01/01/1991', 'Universitario', 5, 580, 176, '16907812');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Margie', '7 Kensington Drive', 'Yakidoo', '01/01/1990', 'Universitario', 6, 1087, 177, '123497862');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Waylin', '2565 Lerdahl Crossing', 'Skippad', '01/01/1989', 'Tecnico', 7, 784, 178, '14567864');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Ag', '8855 Cascade Road', 'Yambee', '01/01/1988', 'Universitario', 8, 580, 179, '16789055');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Nessy', '6321 Acker Road', 'Quaxo', '01/01/1987', 'Tecnico', 9, 361, 180, '18901275');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Nico', '3 Dapin Street', 'Dynava', '01/01/1986', 'Bachillerato', 1, 1185, 181, '17745698');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Carmita', '680 Fisk Road', 'Viva', '01/01/1985', 'Tecnico', 2, 526, 182, '14567832');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Briny', '35939 Laurel Drive', 'Flashset', '01/01/1984', 'Universitario', 3, 1128, 183, '13789034');
+insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id, Emp_Cedula) values ('Aylmer', '97740 Lake View Way', 'Skyvu', '01/01/1983', 'Universitario', 4, 1185, 184, '18401256');
 
--- INICIO INSERT EMPLEADO
+-- FIN INSERT EMPLEADO
 
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Dana', '253 Moose Point', 'Feednation', '01/01/2022', 'Tecnico', 1, 1485, 145);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Celine', '162 Loeprich Junction', 'Quaxo', '01/01/2021', 'Bachillerato', 2, 1376, 146);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Dorisa', '14758 Lakewood Gardens Trail', 'Oyonder', '01/01/2020', 'Bachillerato', 3, 967, 147);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Elianore', '058 Elgar Drive', 'Roodel', '01/01/2019', 'Universitario', 4, 526, 148);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Griswold', '8 Buell Parkway', 'Voolia', '01/01/2018', 'Bachillerato', 5, 390, 149);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Forster', '03 Thompson Avenue', 'Realblab', '01/01/2017', 'Bachillerato', 6, 361, 150);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Halsey', '44931 Aberg Hill', 'Zazio', '01/01/2016', 'Bachillerato', 7, 449, 151);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Lacey', '160 Bunker Hill Place', 'Skipstorm', '01/01/2015', 'Tecnico', 8, 580, 152);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Herc', '893 Mallard Trail', 'Thoughtworks', '01/01/2014', 'Bachillerato', 9, 1185, 153);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Melisande', '40000 Kings Drive', 'Oyonder', '01/01/2013', 'Universitario', 1, 449, 154);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Felisha', '5 Union Street', 'Browsecat', '01/01/2012', 'Universitario', 2, 361, 155);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Alfons', '0334 Hovde Crossing', 'Leexo', '01/01/2011', 'Universitario', 3, 1065, 156);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Paul', '928 Pepper Wood Parkway', 'Buzzdog', '01/01/2010', 'Tecnico', 4, 1376, 157);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Eliza', '4 Springs Crossing', 'Jazzy', '01/01/2009', 'Bachillerato', 5, 700, 158);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Talbert', '53713 Johnson Street', 'Meeveo', '01/01/2008', 'Universitario', 6, 665, 159);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Madelon', '80140 Graedel Circle', 'Browsebug', '01/01/2007', 'Bachillerato', 7, 700, 160);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Anthiathia', '979 Ludington Junction', 'Roomm', '01/01/2006', 'Tecnico', 8, 580, 161);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Tannie', '829 Express Plaza', 'Brainsphere', '01/01/2005', 'Tecnico', 9, 881, 162);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Cornie', '372 Bartillon Pass', 'Podcat', '01/01/2004', 'Bachillerato', 1, 823, 163);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Odille', '4 Montana Avenue', 'Layo', '01/01/2003', 'Bachillerato', 2, 784, 164);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Lavina', '370 Pepper Wood Park', 'Dabvine', '01/01/2002', 'Tecnico', 3, 580, 165);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Vally', '686 Fair Oaks Center', 'Demivee', '01/01/2001', 'Bachillerato', 4, 1251, 166);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Eleen', '06993 Drewry Drive', 'Flipbug', '01/01/2000', 'Tecnico', 5, 1376, 167);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Ora', '27 Karstens Street', 'Demimbu', '01/01/1999', 'Bachillerato', 6, 628, 168);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Anna-diane', '403 Barnett Pass', 'Voonyx', '01/01/1998', 'Universitario', 7, 1087, 169);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Essa', '4 Gulseth Parkway', 'Tagtune', '01/01/1997', 'Tecnico', 8, 881, 170);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Lida', '45856 Shelley Park', 'Omba', '01/01/1996', 'Tecnico', 9, 449, 171);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Morten', '1980 Fremont Road', 'Brainsphere', '01/01/1995', 'Bachillerato', 1, 1251, 172);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Yorgos', '4391 Mcguire Parkway', 'Meejo', '01/01/1994', 'Bachillerato', 2, 1128, 173);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Putnem', '99313 Garrison Parkway', 'Yacero', '01/01/1993', 'Tecnico', 3, 1485, 174);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Benoit', '2003 Elmside Way', 'Dabjam', '01/01/1992', 'Bachillerato', 4, 665, 175);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Camilla', '94 Farragut Crossing', 'Jabberbean', '01/01/1991', 'Universitario', 5, 580, 176);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Margie', '7 Kensington Drive', 'Yakidoo', '01/01/1990', 'Universitario', 6, 1087, 177);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Waylin', '2565 Lerdahl Crossing', 'Skippad', '01/01/1989', 'Tecnico', 7, 784, 178);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Ag', '8855 Cascade Road', 'Yambee', '01/01/1988', 'Universitario', 8, 580, 179);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Nessy', '6321 Acker Road', 'Quaxo', '01/01/1987', 'Tecnico', 9, 361, 180);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Nico', '3 Dapin Street', 'Dynava', '01/01/1986', 'Bachillerato', 1, 1185, 181);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Carmita', '680 Fisk Road', 'Viva', '01/01/1985', 'Tecnico', 2, 526, 182);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Briny', '35939 Laurel Drive', 'Flashset', '01/01/1984', 'Universitario', 3, 1128, 183);
-insert into EMPLEADO (Emp_Nombre, Emp_Direccion, Emp_Exp_Profesional, Emp_Ano_Servicio, Emp_Titulacion, Are_Id, Lug_Id, Usu_Id) values ('Aylmer', '97740 Lake View Way', 'Skyvu', '01/01/1983', 'Universitario', 4, 1185, 184);
 
 -- INICIO INSERT DE RED SOCIAL 
 
@@ -2490,6 +2488,7 @@ INSERT INTO HORARIO (Hor_Dia, Hor_Hora_Entrada ,Hor_Hora_Salida) VALUES
 
 INSERT INTO HORARIO_EMPLEADO (Hor_Id, Emp_Id) VALUES
 (1, 1),
+(1, 3),
 (2, 2),
 (3, 3),
 (4, 4),
@@ -3392,17 +3391,13 @@ INSERT INTO PRUEBA (Pru_Fecha_Inicio, Pru_Fecha_Fin, TipP_Id, Equ_Id) VALUES
 
 -- INICIO INSERT ALMACEN
 -- Inserciones para la tabla ALMACEN
-INSERT INTO ALMACEN (Alm_Capacidad) VALUES
-(3000),  -- Almacén 1 con capacidad de 1000 unidades
-(3000),  -- Almacén 2 con capacidad de 2000 unidades
-(4500),  -- Almacén 3 con capacidad de 1500 unidades
-(3500),  -- Almacén 4 con capacidad de 2500 unidades
-(3000),  -- Almacén 5 con capacidad de 3000 unidades
-(2800),  -- Almacén 6 con capacidad de 1800 unidades
-(2200),  -- Almacén 7 con capacidad de 2200 unidades
-(3300),  -- Almacén 8 con capacidad de 1300 unidades
-(4700),  -- Almacén 9 con capacidad de 1700 unidades
-(2800);  -- Almacén 10 con capacidad de 2400 unidades
+INSERT INTO ALMACEN (Alm_Capacidad, Sed_Id) VALUES
+(3000, 1),  -- Almacén 1 con capacidad de 1000 unidades
+(3000, 2),  -- Almacén 2 con capacidad de 2000 unidades
+(4500, 3),  -- Almacén 3 con capacidad de 1500 unidades
+(3500, 4),  -- Almacén 4 con capacidad de 2500 unidades
+(3000, 5);  -- Almacén 5 con capacidad de 3000 unidades
+
 
 -- FIN INSERT ALMACEN
 
@@ -3608,17 +3603,6 @@ INSERT INTO COMPRA_FACTURA (ComF_Numero_Factura, ComF_Fecha_Hora, ComF_Monto_Tot
 ('CF-039', '2023-11-08', 39500.00, 3950.00, 9, 9),  -- Factura 39
 ('CF-040', '2023-11-09', 40500.00, 4050.00, 10, 10); -- Factura 40
 -- Inserciones adicionales para la tabla COMPRA_FACTURA
-INSERT INTO COMPRA_FACTURA (ComF_Numero_Factura, ComF_Fecha_Hora, ComF_Monto_Total, ComF_Impuesto_Total, Pro_Id, MetP_Id) VALUES
-('CF-041', '2023-11-10', 41500.00, 4150.00, 1, 1),  -- Factura 41
-('CF-042', '2023-11-11', 42500.00, 4250.00, 2, 2),  -- Factura 42
-('CF-043', '2023-11-12', 43500.00, 4350.00, 3, 3),  -- Factura 43
-('CF-044', '2023-11-13', 44500.00, 4450.00, 4, 4),  -- Factura 44
-('CF-045', '2023-11-14', 45500.00, 4550.00, 5, 5),  -- Factura 45
-('CF-046', '2023-11-15', 46500.00, 4650.00, 6, 6),  -- Factura 46
-('CF-047', '2023-11-16', 47500.00, 4750.00, 7, 7),  -- Factura 47
-('CF-048', '2023-11-17', 48500.00, 4850.00, 8, 8),  -- Factura 48
-('CF-049', '2023-11-18', 49500.00, 4950.00, 9, 9),  -- Factura 49
-('CF-050', '2023-11-19', 50500.00, 5050.00, 10, 10); -- Factura 50
 
 -- FIN INSERT COMPRA_FACTURA
 

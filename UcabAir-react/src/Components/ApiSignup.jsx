@@ -1,4 +1,4 @@
-export async function HandleSignup({user, password, email, name, lastName, address, address2 ,phone, pagWeb}) {
+export async function HandleSignup({user, password, email, name, lastName, address, address2 ,phone, pagWeb, cedula}) {
 
 
     return await fetch(`http://localhost:3000/users/signup?user=${user}&password=${password}&email=${email
@@ -7,7 +7,7 @@ export async function HandleSignup({user, password, email, name, lastName, addre
 
     }&address=${address}&address2=${address2
 
-    }&phone=${phone}&pagWeb=${pagWeb}` ,{ method: 'PUT',headers: { 'Accept': 'application/json' } })
+    }&phone=${phone}&pagWeb=${pagWeb}&cedula=${cedula}` ,{ method: 'PUT',headers: { 'Accept': 'application/json' } })
     .then(response => response.json())
     
     .catch((e) => { 

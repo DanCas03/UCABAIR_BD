@@ -52,10 +52,12 @@ CREATE TABLE CLIENTE(
     Cli_Monto_Acreditado integer NOT NULL,
     Cli_Pag_Web varchar(50) NOT NULL,
     Cli_Fecha_Ini_Op date NOT NULL,
+    Cli_Cedula varchar(50) NOT NULL,
     Lug_Id integer NOT NULL, 
     Usu_Id integer NOT NULL,
     CONSTRAINT fk_lugar FOREIGN KEY(Lug_Id) REFERENCES LUGAR(Lug_Id),
-    CONSTRAINT fk_usuario FOREIGN KEY(Usu_Id) REFERENCES USUARIO(Usu_Id)
+    CONSTRAINT fk_usuario FOREIGN KEY(Usu_Id) REFERENCES USUARIO(Usu_Id),
+    CONSTRAINT uq_cliente UNIQUE(Cli_Cedula)
 );
 
 CREATE TABLE PROVEEDOR(
@@ -64,10 +66,12 @@ CREATE TABLE PROVEEDOR(
     Pro_Direccion varchar(50) NOT NULL,
     Pro_Pag_Web varchar(50) NOT NULL,
     Pro_Fecha_Ini_Op date NOT NULL,
+    Pro_Rif varchar(50) NOT NULL,
     Lug_Id integer NOT NULL, 
     Usu_Id integer NOT NULL,
     CONSTRAINT fk_lugar FOREIGN KEY(Lug_Id) REFERENCES LUGAR(Lug_Id),
-    CONSTRAINT fk_usuario FOREIGN KEY(Usu_Id) REFERENCES USUARIO(Usu_Id)
+    CONSTRAINT fk_usuario FOREIGN KEY(Usu_Id) REFERENCES USUARIO(Usu_Id),
+    CONSTRAINT uq_proveedor UNIQUE(Pro_Rif)
 );
 
 CREATE TABLE EMPLEADO(
@@ -77,12 +81,14 @@ CREATE TABLE EMPLEADO(
     Emp_Exp_Profesional varchar(50) NOT NULL,
     Emp_Ano_Servicio date NOT NULL,
     Emp_Titulacion varchar(50) NOT NULL,
+    Emp_Cedula varchar(50) NOT NULL,
     Are_Id integer NOT NULL,
     Lug_Id integer NOT NULL,
     Usu_Id integer NOT NULL,
     CONSTRAINT fk_lugar FOREIGN KEY(Lug_Id) REFERENCES LUGAR(Lug_Id),
     CONSTRAINT fk_usuario FOREIGN KEY(Usu_Id) REFERENCES USUARIO(Usu_Id),
-    CONSTRAINT fk_area FOREIGN KEY(Are_Id) REFERENCES AREA(Are_Id)
+    CONSTRAINT fk_area FOREIGN KEY(Are_Id) REFERENCES AREA(Are_Id),
+    CONSTRAINT uq_empleado UNIQUE(Emp_Cedula)
 );
 
 CREATE TABLE CORREO(
@@ -302,7 +308,9 @@ CREATE TABLE PRUEBA(
 
 CREATE TABLE ALMACEN(
     Alm_Id serial PRIMARY KEY,
-    Alm_Capacidad NUMERIC NOT NULL
+    Alm_Capacidad NUMERIC NOT NULL,
+    Sed_Id INTEGER NOT NULL,
+    CONSTRAINT fk_sede FOREIGN KEY(Sed_Id) REFERENCES SEDE(Sed_Id)
 );
 
 CREATE TABLE CARACTERISTICA_PIEZA (
@@ -528,11 +536,11 @@ CREATE TABLE ESTATUS_PIEZA(
 );
 
 CREATE TABLE CATALOGO(
+    Cat_Id SERIAL,
     Pro_Id INTEGER,
     MatP_Id INTEGER,
     Cat_Precio_Unitario FLOAT NOT NULL,
     CONSTRAINT fk_proveedor FOREIGN KEY(Pro_Id) REFERENCES PROVEEDOR(Pro_Id),
     CONSTRAINT fk_materia_prima  FOREIGN KEY (MatP_Id) REFERENCES MATERIA_PRIMA(MatP_Id),
-    PRIMARY KEY(Pro_Id, MatP_Id)
+    PRIMARY KEY(Cat_Id,Pro_Id, MatP_Id)
 );
-

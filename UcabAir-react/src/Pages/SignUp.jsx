@@ -55,6 +55,7 @@ export default function SignUp() {
         errors?.address && toast.error(errors.address.message);
         errors?.phone && toast.error(errors.phone.message);
         errors?.pagWeb && toast.error(errors.pagWeb.message);
+        errors?.cedula && toast.error(errors.cedula.message);
     });
 
     return (
@@ -88,13 +89,15 @@ export default function SignUp() {
                             if(response === '404'){
                                 toast.error('Ocurrio un error de conexión con el servidor'); 
                             }else{
-                                if(response.message === 'username already exists user'){
+                                if(response.message === 'username already exists'){
                                     toast.error('Ya existe un usuario con ese nombre');
                                 }else if(response.message === 'success'){
                                     sessionStorage.setItem('user', data.user);
                                     toast.success('Su usuario ha sido creado exitosamente');
                                 }else if(response.message === 'email already exists'){
                                     toast.error('Ya existe un usuario con ese correo');
+                                }else if(response.message === 'client already exists'){
+                                    toast.error('Ya existe un cliente con esa cedula, es posible que ya tenga una cuenta');
                                 }
                             
                             }
@@ -110,6 +113,7 @@ export default function SignUp() {
                     <input {...register("passwordConfirm", {required: 'Es necesario que confirme su contraseña'})} placeholder="Confirmación de Contraseña" />
                     <input {...register("name", {required: 'Se requiere un nombre'})} placeholder='Nombre' />
                     <input {...register("lastName", {required: 'Se requiere un apellido'})} placeholder='Apellido' />
+                    <input {...register("cedula", {required: 'Se requiere una cedula'})} placeholder='Cedula' />
                     <input {...register("address", {required: 'Se requiere una dirección'})} placeholder='Dirección' />
                     <input {...register("address2")} placeholder='Dirección 2' />
                     <input {...register("phone", {required: 'Se requiere un número de teléfono'})} placeholder='Número de Teléfono' />
