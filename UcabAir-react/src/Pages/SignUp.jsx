@@ -4,7 +4,7 @@ import Logo from '../Components/Logo';
 import '../styles/SignUp.css';
 import { useForm } from "react-hook-form";
 import toast, { Toaster } from "react-hot-toast";
-import { HandleSignup } from '../Components/ApiSignup';
+import { HandleSignup } from '../Api/ApiSignup';
 import { regExpEmail, regExpPassword } from '../Utils/Regex';
 
 export default function SignUp() {

@@ -1,7 +1,7 @@
 import express from "express";
 import pg from "pg";
 import { pool } from '../Postgres_connection.js';
-import { buscarFila, InsertarRetornando } from './funciones.js';
+import { buscarFila, InsertarRetornando, Select1Tabla } from './funciones.js';
 
 const tablaUsuario = 'usuario';
 const router = express.Router();
@@ -46,8 +46,108 @@ router.put("/signup", async(req, res) => {
     }
 
 });
-//funciones
+router.get("/getRoles", async(req, res) => {
+    try {
+        const result = await Select1Tabla('rol', ['rol_nombre'], []);
+        if (result.message === 'found') {
+            const roles = result.filas.map((rol) => {
+                return rol.rol_nombre;
+            });
+            res.send({roles: roles, message: 'success'});
+        } else {
+            res.send({message: result.message});
+        }
+    } catch (error) {
+        console.log(error);
+        res.send({message: 'error'})
+    }
 
+});
+router.put("/guardarRol", async(req, res) => {
+    try {
+        const user = await buscarFila(tablaUsuario, 'usu_nombre', req.query.user);
+        if (user.message === 'found') {
+            const rol = await buscarFila('rol', 'rol_nombre', req.query.rol);
+            if (rol.message === 'found') {
+                const result2 = await pool.query(`UPDATE ${tablaUsuario} SET rol_id = ${rol.fila.rol_id} WHERE usu_nombre = '${req.query.user}'`);
+                res.send({message: 'success'});
+            } else {
+                res.send({message: 'role not found'});
+            }
+        } else {
+            res.send({message: 'user not found'});
+        }
+    } catch (error) {
+        console.log(error);
+        res.send({message: 'error'})
+    }
+
+});
+router.get("/getUsers", async(req, res) => {
+    try {
+        const clientes = await getClientesRol();
+        const proveedores = await getProveedorRol();
+        const empleados = await getEmpleadoRol();
+        if (clientes.message === 'error' || proveedores.message === 'error' || empleados.message === 'error') {
+            res.send({message: 'error'});
+        }
+        res.send({clientes: clientes, proveedores: proveedores, empleados: empleados, message: 'success'});
+        
+    } catch (error) {
+        console.log(error);
+        res.send({message: 'error'})
+    }
+
+});
+//funciones
+async function getClientesRol() {
+    try {
+        pool.query(`SELECT U.usu_nombre, C.Cli_cedula, C.Cli_nombre, R.rol_nombre, Cor.Cor_url
+            FROM usuario U, cliente C, rol R, correo Cor
+            WHERE C.usu_id=U.usu_Id AND U.rol_id=R.rol_id AND Cor.cli_id=C.cli_id`, (error, results) => {
+            if (error) {
+                throw error;
+            }
+            return results.rows;
+        });
+    } catch (error) {
+        console.log(error);
+        return { message: 'error' };
+    }
+}
+
+async function getProveedorRol() {
+    try {
+        pool.query(`SELECT U.usu_nombre, P.Pro_rif, P.Pro_nombre, R.rol_nombre, Cor.Cor_url
+            FROM usuario U, proveedor P , rol R, correo Cor
+            WHERE P.usu_id=U.usu_Id AND U.rol_id=R.rol_id AND Cor.Por_id=P.pro_id`, (error, results) => {
+            if (error) {
+                throw error;
+            }
+            return results.rows;
+        });
+    } catch (error) {
+        console.log(error);
+        return { message: 'error' };
+    }
+
+}
+
+async function getEmpleadoRol() {
+    try {
+        pool.query(`SELECT U.usu_nombre, E.emp_cedula, E.emp_nombre, R.rol_nombre, Cor.Cor_url
+            FROM usuario U, empleado E, rol R, correo Cor
+            WHERE E.usu_id=U.usu_Id AND U.rol_id=R.rol_id AND Cor.emp_id=E.emp_id`, (error, results) => {
+            if (error) {
+                throw error;
+            }
+            return results.rows;
+        });
+    } catch (error) {
+        console.log(error);
+        return { message: 'error' };
+    }
+}
 
 async function insertarCorreo(correo) {
     try {

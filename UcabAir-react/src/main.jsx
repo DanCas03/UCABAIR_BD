@@ -3,6 +3,7 @@ import './index.css'
 import Start from './Pages/App.jsx'
 import LogIn from './Pages/LogIn.jsx'
 import SignUp from './Pages/SignUp.jsx'
+import Roles from './Pages/Roles.jsx'
 
 import { BrowserRouter, Route, Routes } from "react-router";
 
@@ -13,6 +14,7 @@ export default function App() {
 				<Route path="/" element={<Start />} />
 				<Route path="/login" element={<LogIn />} />
 				<Route path="/signup" element={<SignUp />} />
+				<Route path="/roles" element={<Roles />} />
 
 			</Routes>
 		</BrowserRouter>

@@ -1,7 +1,7 @@
-import { FormField } from "./FormField";
+import { FormField } from "../FormField";
 import {BASE_EMAIL_MAX_LENGTH} from "../utils/constants"
 import {PropTypes} from "prop-types"
-import {IconedInput} from "./IconedInput"
+import {IconedInput} from "../IconedInput"
 import { MdMailOutline } from "react-icons/md";
 /**
  * Componente creado para campos de email

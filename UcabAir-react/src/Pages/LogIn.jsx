@@ -3,7 +3,7 @@ import '../styles/LogIn.css';
 import { useForm } from "react-hook-form";
 import toast, { Toaster } from "react-hot-toast";
 import { useEffect } from 'react';
-import { HandleLogin } from '../Components/ApiLogin';
+import { HandleLogin } from '../Api/ApiLogin';
 
 
 export default function LogIn() {
