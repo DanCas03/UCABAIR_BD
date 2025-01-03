@@ -33,6 +33,7 @@ export async function guardarRol(rol, username) {
 }
 
 export async function getUsers() {
+    console.log('getUsers');
     return await fetch(`http://localhost:3000/users/getUsers` ,{ headers: { 'Accept': 'application/json' } })
     .then(response => response.json())
     .then(

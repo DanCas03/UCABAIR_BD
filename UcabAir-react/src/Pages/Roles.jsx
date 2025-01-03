@@ -6,12 +6,12 @@ import MultipleUsersContainer from "../Components/MultipleUsersContainer";
 import Button from "../Components/referencias/Button";
 
 export default function Roles() {
-    const [users, setUsers] = useState();
+    const [users, setUsers] = useState([]);
     const [indexUser, setIndexUser] = useState(0);
     toast.loading('Cargando usuarios');
     useEffect(() => {
         (async () => {
-            if (users) {
+            if (users.length > 0){
                 return;
             }
             setUsers(await getUsers());
